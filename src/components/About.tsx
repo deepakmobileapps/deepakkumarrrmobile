@@ -1,10 +1,8 @@
 
-import React, { useRef } from 'react';
+import React from 'react';
 import { Code, Smartphone, Zap } from 'lucide-react';
 
 const About = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  
   const highlights = [
     {
       icon: <Code className="h-8 w-8 text-brand-600" />,
@@ -24,18 +22,18 @@ const About = () => {
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-24 bg-gray-50">
+    <section id="about" className="py-24 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
             {/* Text Content */}
             <div>
-              <span className="text-brand-600 font-medium mb-2 block animate-on-scroll">About Me</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-on-scroll">
+              <span className="text-brand-600 font-medium mb-2 block">About Me</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Passionate <span className="text-gradient">Android & KMP</span> Developer
               </h2>
               
-              <div className="space-y-4 text-gray-600 animate-on-scroll">
+              <div className="space-y-4 text-gray-600">
                 <p>
                   I am a passionate <strong>Android & Kotlin Multiplatform Developer</strong> with a strong background in architecting, developing, and optimizing mobile applications.
                 </p>
@@ -59,8 +57,7 @@ const About = () => {
               {highlights.map((highlight, index) => (
                 <div 
                   key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover animate-on-scroll"
-                  style={{ animationDelay: `${index * 200}ms` }}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
                 >
                   <div className="flex items-start">
                     <div className="bg-gray-50 p-3 rounded-lg mr-4">
