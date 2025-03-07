@@ -39,6 +39,9 @@ const About = () => {
                 <p>
                   I am a passionate <strong>Android & Kotlin Multiplatform Developer</strong> with a strong background in architecting, developing, and optimizing mobile applications.
                 </p>
+                <p className="p-3 bg-gray-100 rounded-lg border-l-4 border-brand-500 italic">
+                  "I believe in crafting elegant solutions that not only meet technical requirements but also create delightful user experiences."
+                </p>
                 <p>
                   With expertise in <strong>Jetpack Compose, MVVM, Kotlin, and Compose Multiplatform</strong>, I have built and migrated feature-rich applications that enhance user experience and business efficiency.
                 </p>
