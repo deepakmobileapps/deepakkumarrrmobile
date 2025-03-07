@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { ArrowUpRight, Github } from 'lucide-react';
 import Button from './Button';
@@ -46,14 +45,6 @@ const Projects = () => {
       description: "A cross-platform e-commerce solution built with Kotlin Multiplatform and Compose Multiplatform for both Android and iOS.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       technologies: ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "Koin", "Decompose"],
-      featured: true,
-    },
-    {
-      id: 2,
-      title: "Logistics Scanner App",
-      description: "Built a high-performance barcode scanning and printing application integrating the Zebra SDK for logistics operations.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      technologies: ["Android", "Jetpack Compose", "MVVM", "Barcode API", "Zebra SDK"],
       featured: true,
     },
     {
