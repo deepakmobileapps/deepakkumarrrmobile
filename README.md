@@ -1,8 +1,32 @@
-# Welcome to your Lovable project
+
+# AppXOrbit Portfolio
 
 ## Project info
 
 **URL**: https://lovable.dev/projects/db57aba0-6a6a-463d-82e8-6a7ee6c3b2da
+
+## How to run this project locally
+
+### Prerequisites
+- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+### Steps to run locally
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm install
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+Your app should now be running at http://localhost:8080. Any changes you make to the code will automatically refresh the page.
 
 ## How can I edit this code?
 
@@ -17,24 +41,6 @@ Changes made via Lovable will be committed automatically to this repo.
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
 
 **Edit a file directly in GitHub**
 
@@ -52,7 +58,7 @@ npm run dev
 
 ## What technologies are used for this project?
 
-This project is built with .
+This project is built with:
 
 - Vite
 - TypeScript
