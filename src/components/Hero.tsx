@@ -18,17 +18,20 @@ const Hero = () => {
 
     if (title) title.classList.add('animate-slide-up');
     
-    setTimeout(() => {
-      if (subtitle) subtitle.classList.add('animate-slide-up');
-    }, 200);
+    if (subtitle) {
+      subtitle.classList.remove('opacity-0');
+      subtitle.classList.add('animate-fade-in');
+    }
     
-    setTimeout(() => {
-      if (cta) cta.classList.add('animate-slide-up');
-    }, 400);
+    if (cta) {
+      cta.classList.remove('opacity-0');
+      cta.classList.add('animate-fade-in');
+    }
     
-    setTimeout(() => {
-      if (social) social.classList.add('animate-slide-up');
-    }, 600);
+    if (social) {
+      social.classList.remove('opacity-0');
+      social.classList.add('animate-fade-in');
+    }
   }, []);
 
   return (
@@ -42,13 +45,13 @@ const Hero = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block text-sm md:text-base font-medium px-4 py-1.5 rounded-full bg-brand-100/80 text-brand-700 mb-6 opacity-0 animate-fade-in" style={{animationDelay: '0ms', animationFillMode: 'forwards'}}>
+          <span className="inline-block text-sm md:text-base font-medium px-4 py-1.5 rounded-full bg-brand-100/80 text-brand-700 mb-6 animate-fade-in" style={{animationDelay: '0ms', animationFillMode: 'forwards'}}>
             Android & Kotlin Multiplatform Developer
           </span>
           
           <h1 
             ref={titleRef} 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 opacity-0"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
           >
             Hi, I'm <span className="text-gradient">Deepak</span>
             <br />
@@ -60,7 +63,7 @@ const Hero = () => {
           
           <p 
             ref={subtitleRef}
-            className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto opacity-0"
+            className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
             Specializing in Android, Jetpack Compose, and Kotlin Multiplatform 
             to create high-performance, scalable, and user-centric applications.
@@ -68,7 +71,7 @@ const Hero = () => {
           
           <div 
             ref={ctaRef} 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 opacity-0"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <Button 
               variant="primary" 
@@ -88,7 +91,7 @@ const Hero = () => {
           
           <div 
             ref={socialRef}
-            className="flex items-center justify-center space-x-6 opacity-0"
+            className="flex items-center justify-center space-x-6"
           >
             <a 
               href="https://github.com" 
