@@ -37,35 +37,32 @@ const Home = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden section-padding pt-28 md:pt-32">
       {/* Background elements */}
-      <div className="absolute top-0 right-0 w-3/5 h-full">
-        <div className="absolute top-1/4 right-1/4 w-32 h-32 md:w-64 md:h-64 rounded-full bg-brand-200/50 filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-40 h-40 md:w-80 md:h-80 rounded-full bg-kotlin-purple/20 filter blur-3xl"></div>
-        <div className="absolute top-1/2 right-1/2 w-24 h-24 md:w-48 md:h-48 rounded-full bg-android-green/20 filter blur-3xl"></div>
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-brand-50"></div>
+      <div className="absolute top-1/3 right-1/4 w-64 h-64 rounded-full bg-brand-200/30 filter blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-80 h-80 rounded-full bg-kotlin-purple/10 filter blur-3xl"></div>
 
       <div className="container mx-auto relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <span className="inline-block text-sm md:text-base font-medium px-4 py-1.5 rounded-full bg-brand-100/80 text-brand-700 mb-6 animate-fade-in" style={{animationDelay: '0ms', animationFillMode: 'forwards'}}>
-            Android & Kotlin Multiplatform Developer
+          <span className="inline-block text-sm md:text-base font-medium px-4 py-1.5 rounded-full bg-brand-100/70 text-brand-700 mb-6 animate-fade-in" style={{animationDelay: '0ms', animationFillMode: 'forwards'}}>
+            Mobile Development Specialist
           </span>
           
           <h1 
             ref={titleRef} 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
           >
-            Hi, I'm <span className="text-gradient">Deepak</span>
-            <br />
-            I build <span>
-              mobile experiences
+            Crafting exceptional
+            <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-kotlin-purple to-android-green">
+              digital experiences
             </span>
           </h1>
           
           <p 
             ref={subtitleRef}
-            className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            Specializing in Android, Jetpack Compose, and Kotlin Multiplatform 
-            to create high-performance, scalable, and user-centric applications.
+            I transform ideas into elegant, user-centric mobile applications 
+            using Android, Jetpack Compose, and Kotlin Multiplatform.
           </p>
           
           <div 
@@ -77,14 +74,14 @@ const Home = () => {
               size="lg"
               onClick={() => document.getElementById('projects')?.scrollIntoView()}
             >
-              View My Work
+              View Portfolio
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => document.getElementById('about')?.scrollIntoView()}
+              onClick={() => document.getElementById('contact')?.scrollIntoView()}
             >
-              About Me
+              Get in Touch
             </Button>
           </div>
           
@@ -96,25 +93,28 @@ const Home = () => {
               href="https://github.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-brand-600 transition-colors"
+              className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
+              aria-label="GitHub Profile"
             >
-              <Github size={24} />
+              <Github className="w-6 h-6" />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-brand-600 transition-colors"
+              className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
+              aria-label="LinkedIn Profile"
             >
-              <Linkedin size={24} />
+              <Linkedin className="w-6 h-6" />
             </a>
             <a 
               href="https://twitter.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-brand-600 transition-colors"
+              className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
+              aria-label="Twitter Profile"
             >
-              <Twitter size={24} />
+              <Twitter className="w-6 h-6" />
             </a>
           </div>
         </div>
@@ -123,10 +123,10 @@ const Home = () => {
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button 
           onClick={() => document.getElementById('about')?.scrollIntoView()}
-          className="text-gray-600 hover:text-brand-600 transition-colors"
+          className="text-gray-400 hover:text-brand-600 transition-colors duration-300"
           aria-label="Scroll down"
         >
-          <ArrowDown size={24} />
+          <ArrowDown className="w-6 h-6" />
         </button>
       </div>
     </section>
