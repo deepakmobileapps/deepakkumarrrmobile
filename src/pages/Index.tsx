@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
+import Home from '../components/Home';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
@@ -33,7 +33,7 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden">
       <Navbar />
-      <Hero />
+      <Home />
       <About />
       <Skills />
       <Projects />

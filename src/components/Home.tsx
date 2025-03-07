@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
 import Button from './Button';
 
-const Hero = () => {
+const Home = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -55,9 +55,8 @@ const Hero = () => {
           >
             Hi, I'm <span className="text-gradient">Deepak</span>
             <br />
-            I build <span className="relative">
+            I build <span>
               mobile experiences
-              <span className="absolute -bottom-2 left-0 w-full h-1 bg-brand-500 rounded-full"></span>
             </span>
           </h1>
           
@@ -134,4 +133,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;
