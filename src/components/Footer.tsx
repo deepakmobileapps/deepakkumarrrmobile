@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
@@ -16,7 +17,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="mb-6 md:mb-0">
               <a href="#home" className="text-xl font-display font-bold flex items-center">
-                <span className="mr-1 text-kotlin-purple">App</span>
+                <span className="text-kotlin-purple">App</span>
                 <span className="text-android-green">X</span>
                 <span className="text-white">Orbit</span>
               </a>
