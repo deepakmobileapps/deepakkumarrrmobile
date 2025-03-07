@@ -61,8 +61,8 @@ const Home = () => {
             ref={subtitleRef}
             className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"
           >
-            I transform ideas into elegant, user-centric mobile applications 
-            using Android, Jetpack Compose, and Kotlin Multiplatform.
+            I transform innovative concepts into thoughtful, intuitive experiences 
+            that resonate with users and bring visionary ideas to life.
           </p>
           
           <div 
