@@ -1,75 +1,76 @@
 
 # AppXOrbit Portfolio
 
-## Project info
+This repository contains the source code for the AppXOrbit website, a portfolio showcasing mobile application development expertise.
 
-**URL**: https://lovable.dev/projects/db57aba0-6a6a-463d-82e8-6a7ee6c3b2da
-
-## How to run this project locally
+## Development Setup
 
 ### Prerequisites
-- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- [Node.js](https://nodejs.org/) (v16 or newer)
+- [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+- [Git](https://git-scm.com/)
 
-### Steps to run locally
+### Getting Started with VS Code
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone [repository-url]
+   cd appxorbit-portfolio
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Open in VS Code**
+   ```bash
+   code .
+   ```
+   Or open VS Code and select "File > Open Folder" to navigate to the cloned repository.
 
-# Step 3: Install the necessary dependencies.
-npm install
+3. **Install dependencies**
+   Open a terminal in VS Code (Terminal > New Terminal) and run:
+   ```bash
+   npm install
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+   The application will be available at http://localhost:8080
 
-Your app should now be running at http://localhost:8080. Any changes you make to the code will automatically refresh the page.
+5. **VS Code Extensions (Recommended)**
+   - ESLint
+   - Prettier
+   - Tailwind CSS IntelliSense
+   - React Developer Tools
 
-## How can I edit this code?
+## Project Structure
 
-There are several ways of editing your application.
+- `/src` - Source code
+  - `/components` - React components
+  - `/pages` - Page components
+  - `/hooks` - Custom React hooks
+  - `/lib` - Utility functions and helpers
 
-**Use Lovable**
+## Available Scripts
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/db57aba0-6a6a-463d-82e8-6a7ee6c3b2da) and start prompting.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
+## Technology Stack
 
 - Vite
-- TypeScript
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
+- shadcn/ui components
 
-## How can I deploy this project?
+## Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/db57aba0-6a6a-463d-82e8-6a7ee6c3b2da) and click on Share -> Publish.
+1. Create a feature branch from `main`
+2. Make your changes
+3. Test thoroughly
+4. Submit a pull request
 
-## I want to use a custom domain - is that possible?
+## License
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License - see the LICENSE file for details.
