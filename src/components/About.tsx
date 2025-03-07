@@ -12,7 +12,7 @@ const About = () => {
     {
       icon: <Smartphone className="h-8 w-8 text-kotlin-purple" />,
       title: "Feature Development",
-      description: "Built critical modules like SCAN AND PRINT with Zebra SDK and client-level service & TAT differentiation systems.",
+      description: "Designed and implemented sophisticated UI components and core features that elevate the user experience while meeting business objectives.",
     },
     {
       icon: <Zap className="h-8 w-8 text-android-green" />,
