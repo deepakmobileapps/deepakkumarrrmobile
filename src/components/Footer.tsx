@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail, Zap, Code, Cpu } from 'lucide-react';
 
@@ -25,8 +24,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <span className="text-kotlin-purple">App</span>
-                <span className="text-android-green">X</span>
-                <span className="text-white">Orbit</span>
+                <span className="text-android-green">XOrbit</span>
               </a>
               <p className="text-gray-400 mt-2 max-w-md">
                 Building high-performance, scalable, and user-centric mobile applications with Android and Kotlin Multiplatform.

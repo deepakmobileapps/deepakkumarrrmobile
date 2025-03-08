@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Mail, Zap, Code, Cpu } from 'lucide-react';
 import Button from './Button';
@@ -25,7 +24,6 @@ const Navbar = () => {
   };
 
   const handleGetInTouch = () => {
-    // Scroll to contact section
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -62,11 +60,9 @@ const Navbar = () => {
             </div>
           </div>
           <span className="text-kotlin-purple">App</span>
-          <span className="text-android-green">X</span>
-          <span>Orbit</span>
+          <span className="text-android-green">XOrbit</span>
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
@@ -86,7 +82,6 @@ const Navbar = () => {
           </Button>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-700 hover:text-brand-600 transition-colors"
           onClick={toggleMobileMenu}
@@ -96,7 +91,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="md:hidden bg-white w-full shadow-lg absolute top-full left-0 right-0 animate-fade-in">
           <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
