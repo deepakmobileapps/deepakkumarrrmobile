@@ -46,6 +46,8 @@ const Projects = () => {
       description: "A cross-platform e-commerce solution built with Kotlin Multiplatform and Compose Multiplatform for both Android and iOS.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       technologies: ["Kotlin Multiplatform", "Compose Multiplatform", "Ktor", "Koin", "Decompose"],
+      githubUrl: "https://github.com/example/kmp-ecommerce",
+      liveUrl: "https://example.com/kmp-ecommerce",
       featured: true,
     },
     {
@@ -54,6 +56,7 @@ const Projects = () => {
       description: "Android application for fitness tracking with real-time monitoring and personalized workout plans.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
       technologies: ["Android", "Kotlin", "Room", "Dagger-Hilt", "Firebase"],
+      githubUrl: "https://github.com/example/fitness-app",
       featured: false,
     },
     {
@@ -62,20 +65,26 @@ const Projects = () => {
       description: "Cross-platform weather application with location-based forecasts and animated visualizations.",
       image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
       technologies: ["Kotlin Multiplatform", "Ktor", "Moko-MVVM", "Compose Multiplatform"],
+      liveUrl: "https://example.com/kmp-weather",
       featured: false,
     },
   ];
 
-  const filteredProjects = projects.filter(project => {
-    if (selectedCategory === 'all') return true;
-    if (selectedCategory === 'android') {
-      return project.technologies.some(tech => tech.includes('Android'));
-    }
-    if (selectedCategory === 'kmp') {
-      return project.technologies.some(tech => tech.includes('Kotlin Multiplatform'));
-    }
-    return true;
-  });
+  // Fixed filtering logic
+  const filteredProjects = selectedCategory === 'all' 
+    ? projects 
+    : projects.filter(project => {
+        if (selectedCategory === 'android') {
+          return project.technologies.some(tech => 
+            tech.toLowerCase().includes('android'));
+        }
+        if (selectedCategory === 'kmp') {
+          return project.technologies.some(tech => 
+            tech.toLowerCase().includes('kotlin multiplatform') || 
+            tech.toLowerCase().includes('kmp'));
+        }
+        return false;
+      });
 
   return (
     <section id="projects" className="py-24 bg-gray-50">
