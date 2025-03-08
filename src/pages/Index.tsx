@@ -7,9 +7,15 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import useAnalytics from '../hooks/useAnalytics';
 
 const Index = () => {
+  const { trackPageView } = useAnalytics();
+  
   useEffect(() => {
+    // Track page view when component mounts
+    trackPageView('/', 'Home Page');
+    
     // Animation on scroll functionality
     const observer = new IntersectionObserver(
       (entries) => {
@@ -28,7 +34,7 @@ const Index = () => {
     return () => {
       elements.forEach((el) => observer.unobserve(el));
     };
-  }, []);
+  }, [trackPageView]);
 
   return (
     <div className="min-h-screen overflow-hidden">

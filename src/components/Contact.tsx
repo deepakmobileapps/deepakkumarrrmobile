@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import Button from './Button';
 import { toast } from 'sonner';
+import useAnalytics from '../hooks/useAnalytics';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const { trackEvent } = useAnalytics();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,6 +24,9 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
+      // Track form submit attempt
+      trackEvent('form_submit_attempt', 'Contact', 'Contact Form');
+      
       // Send form data to Formspree
       const response = await fetch('https://formspree.io/f/mjkybpkb', {
         method: 'POST',
@@ -36,6 +41,9 @@ const Contact = () => {
       });
       
       if (response.ok) {
+        // Track successful form submission
+        trackEvent('form_submit_success', 'Contact', 'Contact Form');
+        
         toast.success('Message sent successfully!', {
           description: 'Thanks for reaching out. I will get back to you soon.',
         });
@@ -45,6 +53,10 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error sending form:', error);
+      
+      // Track form submission error
+      trackEvent('form_submit_error', 'Contact', 'Contact Form', 0);
+      
       toast.error('Failed to send message', {
         description: 'Please try again later or contact me directly via email.',
       });
