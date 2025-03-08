@@ -52,12 +52,11 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a 
           href="#home" 
-          className="text-xl font-display font-bold text-brand-700 flex items-center relative"
+          className="text-xl font-display font-bold text-brand-700 flex items-center"
         >
           <span className="text-kotlin-purple">App</span>
           <span className="text-android-green">X</span>
           <span>Orbit</span>
-          <span className="absolute -right-2 -bottom-3 text-xs font-medium italic bg-gradient-to-r from-violet-500 to-orange-400 bg-clip-text text-transparent animate-pulse">By Deepak</span>
         </a>
 
         {/* Desktop Navigation */}
