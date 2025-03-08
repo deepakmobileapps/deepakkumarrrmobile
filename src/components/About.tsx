@@ -26,8 +26,20 @@ const About = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Image */}
+            <div className="order-2 md:order-1 flex justify-center">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-brand-200 to-kotlin-purple/30 rounded-xl blur-lg opacity-70"></div>
+                <img 
+                  src="/lovable-uploads/1e201012-5721-49ed-a807-cea20bb328a0.png" 
+                  alt="Deepak - Android & KMP Developer" 
+                  className="relative rounded-xl shadow-lg max-w-full h-auto object-cover z-10"
+                />
+              </div>
+            </div>
+            
             {/* Text Content */}
-            <div>
+            <div className="order-1 md:order-2">
               <span className="text-brand-600 font-medium mb-2 block">About Me</span>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Passionate <span className="text-gradient">Android & KMP</span> Developer
@@ -53,23 +65,25 @@ const About = () => {
             </div>
             
             {/* Highlight Cards */}
-            <div className="space-y-6">
-              {highlights.map((highlight, index) => (
-                <div 
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
-                >
-                  <div className="flex items-start">
-                    <div className="bg-gray-50 p-3 rounded-lg mr-4">
-                      {highlight.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
-                      <p className="text-gray-600">{highlight.description}</p>
+            <div className="col-span-1 md:col-span-2 space-y-6 mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {highlights.map((highlight, index) => (
+                  <div 
+                    key={index}
+                    className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 card-hover"
+                  >
+                    <div className="flex items-start">
+                      <div className="bg-gray-50 p-3 rounded-lg mr-4">
+                        {highlight.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2">{highlight.title}</h3>
+                        <p className="text-gray-600">{highlight.description}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
