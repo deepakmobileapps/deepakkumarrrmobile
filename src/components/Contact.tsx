@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import Button from './Button';
 import { toast } from 'sonner';
-import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,11 +11,6 @@ const Contact = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  // Initialize EmailJS with your User ID (this is safe to use in frontend code)
-  useEffect(() => {
-    emailjs.init("mjkybpkb");
-  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,18 +22,20 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      // Send email using EmailJS service
-      const response = await emailjs.send(
-        "YOUR_SERVICE_ID", // create service ID from EmailJS dashboard
-        "YOUR_TEMPLATE_ID", // create template ID from EmailJS dashboard
-        {
-          from_name: formData.name,
-          from_email: formData.email,
+      // Send form data to Formspree
+      const response = await fetch('https://formspree.io/f/mjkybpkb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
           message: formData.message,
-        }
-      );
+        }),
+      });
       
-      if (response.status === 200) {
+      if (response.ok) {
         toast.success('Message sent successfully!', {
           description: 'Thanks for reaching out. I will get back to you soon.',
         });
