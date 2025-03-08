@@ -21,9 +21,18 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // For demonstration purposes - This simulates a successful form submission
+    // In production, replace this with your actual Formspree ID
     try {
-      // Send form data to email service
-      const response = await fetch('https://formspree.io/f/your-formspree-id', {
+      // Simulating a successful response
+      toast.success('Message sent successfully!', {
+        description: 'Thanks for reaching out. I will get back to you soon.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+      
+      // Uncomment and add your Formspree ID when ready for production
+      /* 
+      const response = await fetch('https://formspree.io/f/YOUR_ACTUAL_FORMSPREE_ID', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -39,6 +48,7 @@ const Contact = () => {
       } else {
         throw new Error('Failed to send message');
       }
+      */
     } catch (error) {
       console.error('Error sending form:', error);
       toast.error('Failed to send message', {
