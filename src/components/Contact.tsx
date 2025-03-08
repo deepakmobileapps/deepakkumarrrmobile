@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Mail, MessageSquare, Send } from 'lucide-react';
 import Button from './Button';
@@ -15,7 +14,7 @@ const Contact = () => {
   
   // Initialize EmailJS with your User ID (this is safe to use in frontend code)
   useEffect(() => {
-    emailjs.init("YOUR_EMAILJS_USER_ID");
+    emailjs.init("mjkybpkb");
   }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
