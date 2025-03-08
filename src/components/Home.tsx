@@ -1,6 +1,6 @@
 
 import React, { useEffect, useRef } from 'react';
-import { ArrowDown, Github, Linkedin, Twitter } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
 import Button from './Button';
 
 const Home = () => {
@@ -33,6 +33,12 @@ const Home = () => {
       social.classList.add('animate-fade-in');
     }
   }, []);
+
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden section-padding pt-28 md:pt-32">
@@ -72,14 +78,14 @@ const Home = () => {
             <Button 
               variant="primary" 
               size="lg"
-              onClick={() => document.getElementById('projects')?.scrollIntoView()}
+              onClick={() => document.getElementById('projects')?.scrollIntoView({behavior: 'smooth'})}
             >
               View Portfolio
             </Button>
             <Button 
               variant="outline" 
               size="lg"
-              onClick={() => document.getElementById('contact')?.scrollIntoView()}
+              onClick={scrollToContact}
             >
               Get in Touch
             </Button>
@@ -90,7 +96,7 @@ const Home = () => {
             className="flex items-center justify-center space-x-6"
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/deepakmobileapps" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
@@ -99,7 +105,7 @@ const Home = () => {
               <Github className="w-6 h-6" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/deepak-kumar13/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
@@ -107,22 +113,13 @@ const Home = () => {
             >
               <Linkedin className="w-6 h-6" />
             </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-brand-600 transition-colors duration-300"
-              aria-label="Twitter Profile"
-            >
-              <Twitter className="w-6 h-6" />
-            </a>
           </div>
         </div>
       </div>
       
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button 
-          onClick={() => document.getElementById('about')?.scrollIntoView()}
+          onClick={() => document.getElementById('about')?.scrollIntoView({behavior: 'smooth'})}
           className="text-gray-400 hover:text-brand-600 transition-colors duration-300"
           aria-label="Scroll down"
         >

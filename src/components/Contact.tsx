@@ -119,8 +119,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-1">Email</h4>
-                    <a href="mailto:hello@example.com" className="text-brand-600 hover:underline">
-                      hello@example.com
+                    <a href="mailto:deepakmobileapps.in@gmail.com" className="text-brand-600 hover:underline">
+                      deepakmobileapps.in@gmail.com
                     </a>
                   </div>
                 </div>
@@ -132,9 +132,8 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-1">Social Media</h4>
                     <div className="flex space-x-4">
-                      <a href="#" className="text-gray-600 hover:text-brand-600 transition-colors">LinkedIn</a>
-                      <a href="#" className="text-gray-600 hover:text-brand-600 transition-colors">Twitter</a>
-                      <a href="#" className="text-gray-600 hover:text-brand-600 transition-colors">GitHub</a>
+                      <a href="https://www.linkedin.com/in/deepak-kumar13/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-600 transition-colors">LinkedIn</a>
+                      <a href="https://github.com/deepakmobileapps" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-brand-600 transition-colors">GitHub</a>
                     </div>
                   </div>
                 </div>
@@ -145,12 +144,6 @@ const Contact = () => {
                 <p className="mb-4 text-white/90">
                   Currently accepting new projects and freelance opportunities.
                 </p>
-                <Button 
-                  variant="outline" 
-                  className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-                >
-                  Check Availability
-                </Button>
               </div>
             </div>
           </div>

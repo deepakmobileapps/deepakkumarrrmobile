@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowUp, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -36,28 +36,25 @@ const Footer = () => {
               </button>
               <div className="flex space-x-6 my-4">
                 <a 
-                  href="#" 
+                  href="https://github.com/deepakmobileapps" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="GitHub"
                 >
                   <Github size={20} />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.linkedin.com/in/deepak-kumar13/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="#" 
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label="Twitter"
-                >
-                  <Twitter size={20} />
-                </a>
-                <a 
-                  href="mailto:hello@example.com" 
+                  href="mailto:deepakmobileapps.in@gmail.com" 
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Email"
                 >

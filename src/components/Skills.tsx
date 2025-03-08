@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 
 interface SkillCategory {
@@ -52,8 +51,7 @@ const Skills = () => {
         "Decompose",
         "Moko-MVVM",
         "Kotlinx Serialization",
-        "KMP Shared Logic",
-        "Expect/Actual"
+        "KMP Shared Logic"
       ]
     },
     {
