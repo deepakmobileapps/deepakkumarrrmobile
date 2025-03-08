@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
@@ -17,8 +16,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="mb-6 md:mb-0">
               <a href="#home" className="text-xl font-display font-bold flex items-center">
-                <span className="text-kotlin-purple">App</span>
-                <span className="text-android-green">XOrbit</span>
+                <span className="bg-gradient-to-r from-kotlin-purple via-brand-600 to-android-green bg-clip-text text-transparent">AppXOrbit</span>
               </a>
               <p className="text-gray-400 mt-2 max-w-md">
                 Building high-performance, scalable, and user-centric mobile applications with Android and Kotlin Multiplatform.

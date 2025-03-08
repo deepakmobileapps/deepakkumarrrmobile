@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
 import Button from './Button';
@@ -53,8 +52,7 @@ const Navbar = () => {
           href="#home" 
           className="text-xl font-display font-bold flex items-center"
         >
-          <span className="text-kotlin-purple">App</span>
-          <span className="text-android-green">XOrbit</span>
+          <span className="bg-gradient-to-r from-kotlin-purple via-brand-600 to-android-green bg-clip-text text-transparent">AppXOrbit</span>
         </a>
 
         <nav className="hidden md:flex items-center space-x-8">
