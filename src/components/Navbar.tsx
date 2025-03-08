@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 import Button from './Button';
 
 const Navbar = () => {
@@ -22,6 +22,15 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleGetInTouch = () => {
+    // Scroll to contact section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
   };
 
   const navLinks = [
@@ -61,7 +70,11 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button variant="primary">
+          <Button 
+            variant="primary" 
+            onClick={handleGetInTouch}
+            icon={<Mail size={16} />}
+          >
             Get in Touch
           </Button>
         </nav>
@@ -90,7 +103,12 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="primary" className="mt-4 w-full">
+            <Button 
+              variant="primary" 
+              className="mt-4 w-full"
+              onClick={handleGetInTouch}
+              icon={<Mail size={16} />}
+            >
               Get in Touch
             </Button>
           </div>
