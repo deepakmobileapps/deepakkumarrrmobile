@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from 'react';
-import { ArrowUpRight, Github } from 'lucide-react';
 import Button from './Button';
 
 interface Project {
@@ -174,27 +173,7 @@ const Projects = () => {
                       </div>
                       
                       <div className="flex space-x-3">
-                        {project.githubUrl && (
-                          <Button 
-                            variant="outline" 
-                            size="sm"
-                            icon={<Github size={16} />}
-                          >
-                            View Code
-                          </Button>
-                        )}
-                        {project.liveUrl && (
-                          <Button 
-                            variant="primary" 
-                            size="sm"
-                            icon={<ArrowUpRight size={16} />}
-                          >
-                            Live Demo
-                          </Button>
-                        )}
-                        {!project.githubUrl && !project.liveUrl && (
-                          <span className="text-sm text-gray-500 italic">Private Project</span>
-                        )}
+                        <span className="text-sm text-gray-500 italic">Private Project</span>
                       </div>
                     </div>
                   </div>
@@ -204,8 +183,8 @@ const Projects = () => {
           )}
           
           <div className="text-center mt-12">
-            <Button variant="outline" icon={<Github size={20} />}>
-              View More on GitHub
+            <Button variant="outline">
+              Private Portfolio
             </Button>
           </div>
         </div>
