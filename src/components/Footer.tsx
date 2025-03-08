@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowUp, Github, Linkedin, Mail, Zap, Code, Cpu } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -15,14 +16,7 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center mb-8">
             <div className="mb-6 md:mb-0">
-              <a href="#home" className="text-xl font-display font-bold flex items-center gap-2">
-                <div className="flex items-center justify-center bg-gradient-to-br from-kotlin-purple to-android-green p-1.5 rounded-lg">
-                  <div className="relative">
-                    <Cpu size={20} className="text-white" />
-                    <Zap size={14} className="text-android-green absolute -top-1 -right-1" />
-                    <Code size={10} className="text-white absolute bottom-0 right-0" />
-                  </div>
-                </div>
+              <a href="#home" className="text-xl font-display font-bold flex items-center">
                 <span className="text-kotlin-purple">App</span>
                 <span className="text-android-green">XOrbit</span>
               </a>

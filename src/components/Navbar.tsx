@@ -1,5 +1,6 @@
+
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Mail, Zap, Code, Cpu } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
 import Button from './Button';
 
 const Navbar = () => {
@@ -50,15 +51,8 @@ const Navbar = () => {
       <div className="container mx-auto px-6 flex items-center justify-between">
         <a 
           href="#home" 
-          className="text-xl font-display font-bold text-brand-700 flex items-center gap-2"
+          className="text-xl font-display font-bold flex items-center"
         >
-          <div className="flex items-center justify-center bg-gradient-to-br from-kotlin-purple to-android-green p-1.5 rounded-lg">
-            <div className="relative">
-              <Cpu size={20} className="text-white" />
-              <Zap size={14} className="text-android-green absolute -top-1 -right-1" />
-              <Code size={10} className="text-white absolute bottom-0 right-0" />
-            </div>
-          </div>
           <span className="text-kotlin-purple">App</span>
           <span className="text-android-green">XOrbit</span>
         </a>
